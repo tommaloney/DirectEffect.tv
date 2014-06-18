@@ -1,151 +1,104 @@
 <!DOCTYPE html>
-<html><head>
-	<meta charset="UTF-8">
-	<title>Hash Out Bout</title>
-	<link rel="stylesheet" href="style.css" />
-	<style>
-		body {
-			font-family: helvetica;
-			text-align: center;
-		}
-		header {
-			background: url('http://cache4.asset-cache.net/xc/164569244.jpg?v=1&c=IWSAsset&k=2&d=B53F616F4B95E55379F2941497ECF1E39713B19EE295173BA84554326352D5E3');
-			background-size: contain;
-			background-opacity: 0.1;
-		}
-		#main-header-inner li {
-			display: inline;
-			position: absolute;
-			top: 30px;
-		}
-		footer {
-			background: #404040;
-			padding-top: 30px;
-			padding-bottom: 30px;
-		}
-		#main-footer-inner li {
-			display: inline;
-			justify-content: space-between;
-			margin: 0px 15px 0px 15px;
-		}
-		#search {
-			left: 30px;
-		}
-		#login {
-			background-color: #FFF;
-			border: 1px solid #FFF;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 34px;
-			width: 69px;
-			height: 36px;
-			right: 30px;
-		}
-		#sign-up-button {
-			margin: 0px auto;
-			position: relative;
-			top: -50px;
-			color: #FFF;
-			background-color: #F22;
-			width: 350px;	
-		}
-		.curtain-trending {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-between;
-		}
-		.curtain-trending article {
-			max-width: 250px;
-			position: relative;
-			margin: 0px 0px 30px 0px;
-		}
-	</style>
+<html>
 
-	</head>
-	<body>
-		<header role="main">
-			<div id="main-header-wrapper">
-				<ul id="main-header-inner">
-					<li id="search">
-						<input placeholder="Search" id="search_term" type="text">
-					</li>
-					<li id="login" onclick="#">
-						Log in
-						<!--<a class="btn" href="#">Login</a>-->
-					</li>
-				</ul>
-			</div>
-			<div id="logo-wrapper">
-				<a href="index.html" target="_self">
-					<img src="http://unbouncepages-com.s3.amazonaws.com/unbouncepages.com/hashoutbout/9rd9zt-hash-out-bout_0gf0co0gf0co000000.png" alt="HashOutBout">
-				</a>
-			</div>
-			<div id="sign-up-button">
-				Sign up for free
-			</div>
-		</header>
-		<section class="curtain-center">
-			<h1 class="curtain-title">
-				Featured Shows
-			</h1>
-			<div class="curtain-trending">
-				<article>
-					<div class="event-thumb">
-						<a href="http://www.youtube.com/watch?v=UlPjTU8uiXw">
-							<img class="event-img" src="http://upload.wikimedia.org/wikipedia/commons/2/29/Mike_Moyer.jpg"></img>
-							<h2 class="current-event-title">
-								Michael Moyer: Slicing Pie
-							</h2>
-						</a>
-					</div>
-				</article>
-				<article>
-					<div class="event-thumb">
-						<a href="http://www.youtube.com/watch?v=KLAH4puiJ90">
-							<img class="event-img" src="http://www.vanderbilt.edu/magazines/peabody-reflector/wp-content/uploads/Capital-350.jpg"></img>
-							<h2 class="current-event-title">
-								Government's Role in Education and the Education System
-							</h2>
-						</a>
-					</div>
-				</article>
-				<article>
-					<div class="event-thumb">
-						<a href="http://www.youtube.com/watch?v=arpT8CgJBTk">
-							<img class="event-img" src="http://commonsenseatheism.com/wp-content/uploads/2009/12/arguments-for-and-against-christian-theism.png"></img>
-							<h2 class="current-event-title">
-								The Credibility and Truth of Christian Theism
-							</h2>
-						</a>
-					</div>
-				</article>
-			</div>
-		<div id="sub_header">
-			<div class="links">
-				<h2>
-					<a href="liveevents.html">Live & Upcoming</a>
-					<span class="separator">|</span>
-					<a href="previousevents.html">Previous Events</a>
-				</h2>
-			</div>
-		</div>
-		<footer id="main-footer">
-			<section id="site map">
-				<h5>About</h5>
-				<ul id="main-footer-inner">
-					<li>Direct Effect</li>
-					<li>Press</li>
-					<li>Our Team</li>
-					<li>Contact</li>
-				</ul>
-			</section>
-			<section id="copyright">
-				© 2014 Direct Effect.tv, Inc. All rights reserved.
-				<span class="separator">|</span>
-				<a href="#">Privacy Policy</a>
-				<span class="separator">|</span>
-				<a href="#">Terms of Service</a>
-			</section>
-		</footer>
-	</body>
+  <head>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left nav nav-pills">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Browse</a></li>
+        </ul>
+        <ul class="pull-right nav nav-pills">
+          <li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Sign Up</button></li>
+          <li><a href="#">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Be a part of the solution.</h1>
+        <p>See the greatest minds come together.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div> 
+
+    <div class="relevant-shows">
+        <div class="container">
+            <h2>Featured and Upcoming Shows</h2>
+            <p></p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://i.imgur.com/8GSNL9T.jpg">
+                        <p>Government's Role in Education and the Education System</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://goo.gl/hYGD6K">
+                        <p>The Credibility and Truth of Christian Theism</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://i.imgur.com/2a4IqWJ.png">
+                        <p>Government Establishment vs. Anarchy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="learn-more">
+  	  <div class="container">
+    		<div class="row">
+  	      <div class="col-md-4">
+      			<h3>Travel</h3>
+      			<p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>
+      			<p><a href="#">See how to travel on Airbnb</a></p>
+  	      </div>
+    		  <div class="col-md-4">
+      			<h3>Host</h3>
+      			<p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+      			<p><a href="#">Learn more about hosting</a></p>
+    		  </div>
+    		  <div class="col-md-4">
+      			<h3>Trust and Safety</h3>
+      			<p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+    		    <p><a href="#">Learn about trust at Airbnb</a></p>
+  		    </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>Something</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
