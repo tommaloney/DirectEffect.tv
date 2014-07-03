@@ -10,6 +10,10 @@
   display: inline;
 }
 
+.event-header {
+  background-color: #efefef;
+}
+
 .jumbotron {
   background-image:url('http://goo.gl/HVde2V');
   background-size: cover;
