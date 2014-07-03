@@ -8,6 +8,7 @@
 
 .nav li {
   display: inline;
+  padding: 10px;
 }
 
 .event-header {
