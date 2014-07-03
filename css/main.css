@@ -66,3 +66,11 @@
 .learn-more a {
   color: #00b0ff;
 }
+
+#messagesDiv {
+  height: 200px;
+  width: 150px;
+  overflow: scroll;
+  border: 1px solid black;
+  font-size: 14px;
+}
