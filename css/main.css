@@ -1,0 +1,76 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+  padding: 10px;
+}
+
+.event-header {
+  background-color: #efefef;
+}
+
+.jumbotron {
+  background-image:url('http://goo.gl/HVde2V');
+  background-size: cover;
+  height: 500px;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.relevant-shows {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.relevant-shows h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.relevant-shows p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+#messagesDiv {
+  height: 200px;
+  width: 150px;
+  overflow: scroll;
+  border: 1px solid black;
+  font-size: 14px;
+}
