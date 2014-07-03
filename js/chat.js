@@ -1,6 +1,6 @@
   document.addEventListener("DOMContentLoaded", function() {
-  var myDataRef = new Firebase('https://hashoutboutchat.firebaseio.com/');
-
+  var roomName = window.location.href.split(".tv/")[1].split(".html")[0];
+  var readChatroom = new Firebase("https://hashoutboutchat.firebaseio.com/" + roomName + "/chatData");
 
   $('#messageInput').keypress(function (e) {
     if (e.keyCode == 13) {
@@ -8,17 +8,19 @@
       var chatData = [];
       var name = $('#nameInput').val();
       var text = $('#messageInput').val();
+
+      readChatroom.on('value', function(snapshot) {
+        if (snapshot.val()) {
+          chatData = snapshot.val();
+        }
+      });
+
       if(unNaturalCharacters(name) || unNaturalCharacters(text)){
         alert("Please don't hack our site, that's not very nice.");
       }
       else {
         chatData.push({name: name, text: removeBadWords(text)});
-        myDataRef.set(
-          {chatRoom: {
-            roomName: chatRoom, 
-            chatData: chatData
-          }
-        });
+        readChatroom.set(chatData);
       }
 
       $('#messageInput').val('');
@@ -26,8 +28,7 @@
   });
 
 
-  myDataRef.on('child_added', function(snapshot) {
-    console.log(snapshot.val());
+  readChatroom.on('child_added', function(snapshot) {
     var message = snapshot.val();
     displayChatMessage(message.name, message.text);
   });
